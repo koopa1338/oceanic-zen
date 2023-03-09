@@ -1,36 +1,37 @@
 @import "colors";
 
 @font-face {
-    font-family: 'Iosevka';
-    src: url("/fonts/iosevka-regular.woff2");
+    font-family: 'Inconsolata';
+    src: url("/fonts/inconsolata-mono-regular.woff2");
     font-display: swap;
 }
 @font-face {
-    font-family: 'Iosevka';
-    src: url("/fonts/iosevka-italic.woff2");
+    font-family: 'Inconsolata';
+    src: url("/fonts/inconsolata-mono-regular.woff2");
     font-style: italic;
     font-display: swap;
 }
 @font-face {
-    font-family: 'Iosevka';
-    src: url("/fonts/iosevka-bold.woff2");
+    font-family: 'Inconsolata';
+    src: url("/fonts/inconsolata-mono-bold.woff2");
     font-weight: bold;
     font-display: swap;
 }
 @font-face {
-    font-family: 'Iosevka';
-    src: url("/fonts/iosevka-bolditalic.woff2");
+    font-family: 'Inconsolata';
+    src: url("/fonts/inconsolata-mono-bold.woff2");
     font-weight: bold;
     font-style: italic;
     font-display: swap;
 }
 
-$font: "Iosevka", sans-serif;
-$font-mono:  "Iosevka", monospace;
+$font: "Inconsolata", monospace;
+$font-mono: $font;
 $padding: 8px;
 
 body {
     font: 100% $font;
+    line-height: 1.4rem;
     background: $black;
     color: $white;
 }
@@ -86,8 +87,7 @@ nav {
 
 ul {
     list-style: none inside none;
-    list-style-type: "·";
-    padding: 0;
+    list-style-type: " ";
 }
 
 li::marker {
