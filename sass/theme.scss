@@ -142,7 +142,7 @@ pre {
 }
 
 code {
-    font: 16px $font-mono;
+    font: 1rem $font-mono;
 }
 
 p > code {
@@ -151,18 +151,18 @@ p > code {
 }
 
 .logo {
-    font-size: 26px;
+    font-size: 2rem;
     font-weight: bold;
 }
 
 .date {
     color: $gray_light;
-    font-size: 14px;
+    font-size: 1rem;
 }
 
 .border {
     color: $gray_dark;
-    margin: 8px 0 8px 0;
+    margin: .8rem 0 .8rem 0;
     border-top: 2px dashed;
 }
 
@@ -173,8 +173,8 @@ p > code {
 .icon {
     display: inline-block;
     vertical-align: middle;
-    width: 16px;
-    height: 16px;
+    width: 1rem;
+    height: 1rem;
 }
 
 .content {
@@ -192,6 +192,117 @@ p > code {
     }
 }
 
-img {
-    max-width: 100%;
+// Embedded content
+.yvi {
+  position: absolute;
+  top: 0;
+  left: 0
 }
+
+.yv {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden
+}
+
+img,
+video,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+
+iframe {
+  border-style: none;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+
+  &.left {
+    margin-right: auto;
+  }
+
+  &.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &.right {
+    margin-left: auto;
+  }
+}
+
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 3rem 0;
+}
+
+table, th, td {
+  border: 1px dashed $cyan;
+  padding: 0.7rem;
+}
+
+th {
+  color: $cyan;
+}
+
+figure {
+  display: table;
+  max-width: 100%;
+  margin: 2rem 0;
+
+  &.left {
+    img {
+      margin-right: auto;
+    }
+  }
+
+  &.center {
+    img {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &.right {
+    img {
+      margin-left: auto;
+    }
+  }
+
+  figcaption {
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    margin-top: .5rem;
+    background: $black;
+    color: $cyan;
+
+    &.left {
+      text-align: left;
+    }
+
+    &.center {
+      text-align: center;
+    }
+
+    &.right {
+      text-align: right;
+    }
+  }
+}
+
